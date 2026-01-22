@@ -1,67 +1,32 @@
-/* GLOBAL THEME - SensAI Master Style */
-
+/* SENS-AI GLOBAL THEME - UPDATED WITH EXACT DNA */
 :root {
-    --bg-color: #000101;
-    --accent-blue: #3b82f6;
-    --text-main: #ffffff;
-    --text-dim: #a1a1aa;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    --bg-deep: #000101;
+    --sensai-teal: rgba(114, 240, 223, 0.25);
+    --sensai-white: #f2fffd;
+    --sensai-blue: #3b82f6;
 }
 
 body {
-    background-color: var(--bg-color);
-    /* The subtle blue glow at the top for depth */
-    background-image: radial-gradient(circle at 50% -20%, #0a192f 0%, transparent 50%);
+    background-color: var(--bg-deep);
+    /* The exact gradient positioning you found via F12 */
+    background-image: radial-gradient(60% 40% at 61% 64%, var(--sensai-teal), transparent 70%);
     background-attachment: fixed;
-    color: var(--text-main);
-    font-family: 'Inter', sans-serif;
+    color: var(--sensai-white);
+    font-family: "Inter", system-ui, sans-serif;
+    margin: 0;
     overflow-x: hidden;
 }
 
-/* The "Grain" texture that makes the site look premium */
-body::before {
-    content: "";
-    position: fixed;
-    top: 0; left: 0; width: 100%; height: 100%;
-    opacity: 0.02;
-    pointer-events: none;
-    background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
-    z-index: 1;
-}
-
-/* Reusable Gradient Text Class */
-.gradient-text {
-    background: linear-gradient(to right, #ffffff 30%, #3b82f6 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-/* Card Style for Technology and About pages */
-.card {
+/* Reusable Glass Card with the Mint-White text */
+.card-glass {
     background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(10px);
-    transition: all 0.3s ease;
+    border: 1px solid rgba(114, 240, 223, 0.1);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    transition: all 0.4s ease;
 }
 
-.card:hover {
-    border-color: rgba(59, 130, 246, 0.5);
-    transform: translateY(-5px);
-}
-
-/* Smooth Scroll Reveal */
-.reveal {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.reveal.active {
-    opacity: 1;
-    transform: translateY(0);
+.card-glass:hover {
+    border-color: rgba(114, 240, 223, 0.4);
+    box-shadow: 0 0 30px rgba(114, 240, 223, 0.1);
 }
