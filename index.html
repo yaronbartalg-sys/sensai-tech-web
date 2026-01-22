@@ -8,24 +8,43 @@
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <style>
-        .hero-glow {
-            background: radial-gradient(circle at center, rgba(59, 130, 246, 0.15) 0%, rgba(5, 5, 5, 1) 70%);
+        /* EXACT BACKGROUND MATCH */
+        body {
+            background-color: #000101; /* The exact black from test.sensai-tech.com */
+            background-image: 
+                radial-gradient(circle at 50% -20%, #0a192f 0%, transparent 50%), /* Top subtle blue glow */
+                radial-gradient(circle at 50% 50%, #000101 0%, #000000 100%);
+            background-attachment: fixed;
         }
+
+        /* Subtle Grain Overlay for that premium feel */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            opacity: 0.02;
+            pointer-events: none;
+            background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+            z-index: 1;
+        }
+
+        .hero-glow {
+            /* This mimics the "spotlight" effect on the original homepage */
+            background: radial-gradient(circle at center, rgba(59, 130, 246, 0.05) 0%, transparent 70%);
+        }
+
         .reveal { opacity: 0; transform: translateY(20px); transition: all 0.8s ease-out; }
         .reveal.active { opacity: 1; transform: translateY(0); }
         
         #mobile-menu { display: none; }
         #mobile-menu.active { display: flex; }
 
-        /* Custom spacing for the top tag */
-        .tech-tag {
-            letter-spacing: 0.25em;
-        }
+        .tech-tag { letter-spacing: 0.25em; }
     </style>
 </head>
-<body class="bg-[#050505] text-white font-['Inter']">
+<body class="text-white font-['Inter']">
 
-    <nav class="fixed top-0 w-full bg-black/90 backdrop-blur-md z-50 border-b border-gray-800">
+    <nav class="fixed top-0 w-full bg-[#000101]/80 backdrop-blur-xl z-50 border-b border-white/5">
         <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
             <a href="/"><img src="https://test.sensai-tech.com/wp-content/uploads/2025/11/SensAI-Logo.svg" alt="SensAI" class="h-6 md:h-7"></a>
             
@@ -35,14 +54,14 @@
                 <a href="#" class="hover:text-blue-400 transition">Resources</a>
             </div>
 
-            <button id="menu-btn" class="md:hidden text-white focus:outline-none">
-                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            <button id="menu-btn" class="md:hidden text-white">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16m-7 6h7" stroke-width="2" stroke-linecap="round"></path></svg>
             </button>
 
             <a href="#contact" class="hidden md:block bg-blue-600 hover:bg-blue-700 px-6 py-2.5 rounded-full text-xs font-bold transition">GET STARTED</a>
         </div>
 
-        <div id="mobile-menu" class="flex-col bg-black border-b border-gray-800 p-8 space-y-6 text-center md:hidden">
+        <div id="mobile-menu" class="flex-col bg-[#000101] border-b border-white/10 p-8 space-y-6 text-center md:hidden">
             <a href="/technology" class="text-base font-bold uppercase tracking-widest">Technology</a>
             <a href="/about" class="text-base font-bold uppercase tracking-widest">About</a>
             <a href="#" class="text-base font-bold uppercase tracking-widest">Resources</a>
@@ -50,25 +69,25 @@
         </div>
     </nav>
 
-    <div class="pt-20">
-        <section class="hero-glow min-h-[85vh] flex flex-col items-center justify-center text-center px-4 overflow-hidden">
+    <div class="pt-20 relative z-10">
+        <section class="hero-glow min-h-[85vh] flex flex-col items-center justify-center text-center px-4">
             <div class="animate__animated animate__fadeInDown">
-                <span class="tech-tag px-5 py-2 border border-blue-500/30 rounded-full bg-blue-500/10 text-blue-400 text-[12px] md:text-[13px] uppercase font-bold">
+                <span class="tech-tag px-5 py-2 border border-blue-500/20 rounded-full bg-blue-500/5 text-blue-400 text-[12px] md:text-[13px] uppercase font-bold">
                     Advanced rPPG & rBCG Technology
                 </span>
             </div>
             
-            <h1 class="animate__animated animate__fadeInUp mt-10 text-5xl md:text-8xl font-extrabold tracking-tighter">
+            <h1 class="animate__animated animate__fadeInUp mt-10 text-5xl md:text-8xl font-extrabold tracking-tighter text-white">
                 Truth. <span class="text-blue-500">Redefined.</span>
             </h1>
             
-            <p class="animate__animated animate__fadeIn mt-8 max-w-2xl text-gray-400 text-lg md:text-xl leading-relaxed animate__delay-1s px-4">
+            <p class="animate__animated animate__fadeIn mt-8 max-w-2xl text-gray-400 text-lg md:text-xl leading-relaxed animate__delay-1s">
                 SensAI is an AI-powered real-time decision-support platform for deception detection and integrity assessment.
             </p>
 
             <div class="animate__animated animate__fadeInUp mt-12 flex flex-col sm:flex-row gap-5 animate__delay-1s w-full max-w-xs sm:max-w-none justify-center">
                 <button class="bg-white text-black px-12 py-4 rounded-full font-bold hover:bg-gray-200 transition">Book a Demo</button>
-                <button class="border border-gray-700 px-12 py-4 rounded-full font-bold hover:bg-gray-800 transition">Watch Video</button>
+                <button class="border border-white/10 px-12 py-4 rounded-full font-bold hover:bg-white/5 transition">Watch Video</button>
             </div>
         </section>
 
@@ -79,7 +98,9 @@
                     <p class="text-gray-400 text-lg mb-8">Our platform modernizes integrity assessment by augmenting human intuition with a scientific, physiological decision-support layer.</p>
                 </div>
                 <div class="reveal">
-                    <img src="https://test.sensai-tech.com/wp-content/uploads/2025/10/Asset-4-1.png" class="rounded-2xl border border-gray-800 w-full shadow-2xl shadow-blue-500/5" alt="AI Interface">
+                    <div class="p-1 bg-gradient-to-b from-white/10 to-transparent rounded-2xl">
+                        <img src="https://test.sensai-tech.com/wp-content/uploads/2025/10/Asset-4-1.png" class="rounded-xl w-full" alt="AI Interface">
+                    </div>
                 </div>
             </div>
         </section>
