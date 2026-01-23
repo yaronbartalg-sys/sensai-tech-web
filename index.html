@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <style>
-        /* This ensures the scroll reveal works smoothly */
+        /* Smooth Scroll Reveal Animations */
         .reveal { opacity: 0; transform: translateY(20px); transition: all 0.8s ease-out; }
         .reveal.active { opacity: 1; transform: translateY(0); }
         
@@ -17,9 +17,9 @@
 
         .tech-tag { letter-spacing: 0.25em; }
 
-        /* Custom Glow for the Video Container */
+        /* Concentrated Glow for the refined video frame */
         .video-glow {
-            box-shadow: 0 0 50px -12px rgba(114, 240, 223, 0.2);
+            box-shadow: 0 0 40px -10px rgba(114, 240, 223, 0.25);
         }
     </style>
 </head>
@@ -35,7 +35,7 @@
                 <a href="#" class="hover:text-blue-400 transition">Resources</a>
             </div>
 
-            <button id="menu-btn" class="md:hidden text-white">
+            <button id="menu-btn" class="md:hidden text-white focus:outline-none">
                 <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16m-7 6h7" stroke-width="2" stroke-linecap="round"></path></svg>
             </button>
 
@@ -51,25 +51,25 @@
     </nav>
 
     <div class="pt-24 relative z-10">
-        <section class="min-h-[70vh] flex flex-col items-center justify-center text-center px-4">
+        <section class="min-h-[85vh] flex flex-col items-center justify-center text-center px-4">
             <div class="animate__animated animate__fadeInDown">
                 <span class="tech-tag px-5 py-2 border border-cyan-500/20 rounded-full bg-cyan-500/5 text-cyan-400 text-[12px] md:text-[13px] uppercase font-bold">
                     Advanced rPPG & rBCG Technology
                 </span>
             </div>
             
-            <h1 class="animate__animated animate__fadeInUp mt-10 text-5xl md:text-8xl font-extrabold tracking-tighter text-white">
+            <h1 class="animate__animated animate__fadeInUp mt-10 text-5xl md:text-7xl font-extrabold tracking-tighter leading-tight text-white">
                 Truth. <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Redefined.</span>
             </h1>
             
-            <p class="animate__animated animate__fadeIn mt-8 max-w-2xl text-gray-400 text-lg md:text-xl leading-relaxed animate__delay-1s px-4">
+            <p class="animate__animated animate__fadeIn mt-6 max-w-2xl text-gray-400 text-base md:text-lg leading-relaxed animate__delay-1s px-4">
                 SensAI is an AI-powered real-time decision-support platform for deception detection and integrity assessment.
             </p>
 
-            <div class="animate__animated animate__fadeInUp animate__delay-1s mt-16 max-w-5xl mx-auto px-4 relative group">
-                <div class="absolute -inset-1 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-[2.2rem] blur-2xl opacity-40 group-hover:opacity-70 transition duration-1000"></div>
+            <div class="animate__animated animate__fadeInUp animate__delay-1s mt-12 max-w-3xl mx-auto px-6 relative group">
+                <div class="absolute -inset-1 bg-gradient-to-r from-cyan-500/30 to-blue-500/30 rounded-[1.6rem] blur-xl opacity-40 group-hover:opacity-60 transition duration-1000"></div>
 
-                <div class="relative bg-black rounded-[2rem] overflow-hidden border border-white/10 video-glow">
+                <div class="relative bg-black rounded-[1.5rem] overflow-hidden border border-white/10 video-glow">
                     <video 
                         autoplay 
                         loop 
@@ -81,14 +81,13 @@
                         Your browser does not support the video tag.
                     </video>
 
-                    <div class="absolute inset-0 pointer-events-none ring-1 ring-inset ring-white/10 rounded-[2rem]"></div>
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/10 pointer-events-none"></div>
+                    <div class="absolute inset-0 pointer-events-none ring-1 ring-inset ring-white/10 rounded-[1.5rem]"></div>
                 </div>
             </div>
 
-            <div class="animate__animated animate__fadeInUp mt-16 flex flex-col sm:flex-row gap-5 animate__delay-1s w-full max-w-xs sm:max-w-none justify-center">
-                <button class="bg-white text-black px-12 py-4 rounded-full font-bold hover:bg-gray-200 transition transform hover:scale-105">Book a Demo</button>
-                <button class="border border-white/10 px-12 py-4 rounded-full font-bold hover:bg-white/5 transition">Learn More</button>
+            <div class="animate__animated animate__fadeInUp mt-12 flex flex-col sm:flex-row gap-5 animate__delay-1s w-full max-w-xs sm:max-w-none justify-center">
+                <button class="bg-white text-black px-10 py-3.5 rounded-full font-bold hover:bg-gray-200 transition transform hover:scale-105">Book a Demo</button>
+                <button class="border border-white/10 px-10 py-3.5 rounded-full font-bold hover:bg-white/5 transition">Learn More</button>
             </div>
         </section>
 
@@ -97,9 +96,9 @@
                 <div class="reveal">
                     <h2 class="text-4xl md:text-5xl font-bold mb-8 tracking-tight">Strengthening Human Judgment</h2>
                     <p class="text-gray-400 text-lg md:text-xl mb-8 leading-relaxed">Our platform modernizes integrity assessment by augmenting human intuition with a scientific, physiological decision-support layer designed for real-world operations.</p>
-                    <div class="flex items-center space-x-4 text-cyan-400 font-bold">
+                    <div class="flex items-center space-x-4 text-cyan-400 font-bold group cursor-pointer">
                         <span>Explore the Technology</span>
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                        <svg class="w-5 h-5 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
                     </div>
                 </div>
                 <div class="reveal">
@@ -113,16 +112,16 @@
 
     <footer class="py-20 text-center border-t border-white/5 bg-black/20">
         <img src="https://test.sensai-tech.com/wp-content/uploads/2025/11/SensAI-Logo.svg" alt="SensAI" class="h-5 mx-auto mb-8 opacity-40">
-        <p class="text-gray-600 text-sm tracking-widest uppercase">&copy; 2026 SensAI Technology. All rights reserved.</p>
+        <p class="text-gray-600 text-[10px] tracking-[0.3em] uppercase">&copy; 2026 SensAI Technology. All rights reserved.</p>
     </footer>
 
     <script>
-        // Mobile Menu Toggle
+        // Hamburger Toggle logic
         const btn = document.getElementById('menu-btn');
         const menu = document.getElementById('mobile-menu');
         btn.addEventListener('click', () => { menu.classList.toggle('active'); });
 
-        // Scroll Reveal Logic
+        // Scroll Reveal logic
         function reveal() {
             var reveals = document.querySelectorAll(".reveal");
             for (var i = 0; i < reveals.length; i++) {
@@ -132,7 +131,7 @@
             }
         }
         window.addEventListener("scroll", reveal);
-        reveal(); // Run once on load
+        reveal();
     </script>
 </body>
 </html>
